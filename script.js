@@ -64,7 +64,20 @@ function createGrid(size) {
                 }
                 else if (eraser) {
                     e.target.style.background = "#ecf39e";
-            
+
+                }
+                else if (shading) {
+                    let target = e.target;
+                    target.style.background = color.value;
+                    if (target.dataset.visited == null) {
+                        target.dataset.visited = "true";
+                        target.dataset.opacity = "0.1";
+                        target.style.opacity = +(target.dataset.opacity);
+                    }
+                    else {
+                        target.dataset.opacity = +(target.dataset.opacity) + 0.1;
+                        target.style.opacity = target.dataset.opacity
+                    }
                 }
                 else {
                     buttons.forEach(item => item.style.background = "#edede9");
