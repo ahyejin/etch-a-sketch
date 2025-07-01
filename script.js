@@ -61,10 +61,11 @@ function createGrid(size) {
             squares.addEventListener("mouseover", function (e) {
                 if (randomColorFlag) {
                     e.target.style.background = randomColor();
+                    e.target.style.opacity = 1;
                 }
                 else if (eraser) {
                     e.target.style.background = "#ecf39e";
-
+                    e.target.style.opacity = 1;
                 }
                 else if (shading) {
                     let target = e.target;
