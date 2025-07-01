@@ -10,18 +10,25 @@
 </head>
 
 <body>
-    <h1>Etch A Sketch</h1>
-    <span>
-        <input type="text" placeholder="Enter the grid size">
-        <button>Submit</button>
-    </span>
-
-
     <div class="main-section">
-        <div class=container></div>
-    </div>
+        <h1>Etch a sketch</h1>
 
+        <div class="container">
+            <div class="sidebar">
 
+                <label>Select Grid Size: </label>
+                <input type="range" id="gridSize" min="3" max="100" value="16">
+                <label> Choose Color </label>
+                <input type="color" id="color" value="#0077b6">
+                <button class = "multicolor">Multicolor</button>
+                <button class = "shading">Shading</button>
+
+                <button>Eraser</button>
+                <button>Clear</button>
+
+            </div>
+            <div class="sketchpad"></div>
+        </div>
     </div>
 </body>
 
