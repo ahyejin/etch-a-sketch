@@ -3,7 +3,7 @@ const gridSize = document.querySelector("#gridSize");
 gridSize.addEventListener("input", function (e) {
     createGrid(e.target.value);
 })
-
+const color = document.querySelector("#color");
 function createGrid(size) {
     if (sketchpad.hasChildNodes()) {
         sketchpad.textContent = "";
@@ -16,7 +16,9 @@ function createGrid(size) {
             squares.style.width = (1100 / size) + "px"
             rows.appendChild(squares);
             squares.classList.add("columns");
-
+            squares.addEventListener("mouseover", function (e) {
+                    e.target.style.background = color.value;
+            })
         }
         sketchpad.appendChild(rows);
     }
