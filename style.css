@@ -32,7 +32,7 @@ h1 {
 }
 
 .sidebar {
-    height: 550px;
+    height: 85svh;
     width: 250px;
     border: 1px solid grey;
     background: #edede9;
@@ -45,13 +45,14 @@ h1 {
 }
 
 .sketchpad {
-    height: 550px;
+    height: 85svh;
     width: 1100px;
     background: #ecf39e;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex : 1;
 
 }
 
