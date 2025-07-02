@@ -54,8 +54,8 @@ function createGrid(size) {
         const rows = document.createElement("div");
         for (let j = 0; j < size / 2 - 1; j++) {
             const squares = document.createElement("div");
-            squares.style.height = (1100 / size) + "px";
-            squares.style.width = (1100 / size) + "px"
+            squares.style.height = (sketchpad.offsetWidth / size) + "px";
+            squares.style.width = (sketchpad.offsetWidth / size) + "px"
             rows.appendChild(squares);
             squares.classList.add("columns");
             squares.addEventListener("mouseover", function (e) {
